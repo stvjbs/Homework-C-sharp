@@ -1,10 +1,10 @@
 ﻿// Пробная работа. Сможет решать первые две задачи. 
 
-Console.WriteLine("Input amount of numbers");
-int size = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine ("Input amount of numbers");
+int size = Convert.ToInt32 (Console.ReadLine());
 int index = 0;
 int[] numbers = new int[size];
-while(index<size)
+while (index < size)
 {
     Console.WriteLine("Input the number");
     numbers[index] = Convert.ToInt32(Console.ReadLine());
@@ -13,7 +13,7 @@ while(index<size)
 int max = numbers[0];
 int min = numbers[0];
 index = 1;
-while(index<size)
+while(index < size)
 {
     if(max < numbers[index])
         max = numbers[index];
