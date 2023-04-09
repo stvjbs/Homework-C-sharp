@@ -1,27 +1,27 @@
 ﻿// Пробная работа. Сможет решать первые две задачи. 
 
-// Console.WriteLine ("Input amount of numbers");
-// int size = Convert.ToInt32 (Console.ReadLine());
-// int index = 0;
-// int[] numbers = new int[size];
-// while (index < size)
-// {
-//     Console.WriteLine("Input the number");
-//     numbers[index] = Convert.ToInt32(Console.ReadLine());
-//     index = index + 1;
-// }
-// int max = numbers[0];
-// int min = numbers[0];
-// index = 1;
-// while(index < size)
-// {
-//     if(max < numbers[index])
-//         max = numbers[index];
-//     if(min > numbers[index])    
-//         min = numbers[index];
-//     index = (index + 1);
-// }
-// Console.WriteLine($"Maximal number is {max} and minimal is {min}.");
+Console.WriteLine ("Input amount of numbers");
+int size = Convert.ToInt32 (Console.ReadLine());
+int index = 0;
+int[] numbers = new int[size];
+while (index < size)
+{
+    Console.WriteLine("Input the number");
+    numbers[index] = Convert.ToInt32(Console.ReadLine());
+    index++;
+}
+int max = numbers[0];
+int min = numbers[0];
+index = 1;
+while(index < size)
+{
+    if(max < numbers[index])
+        max = numbers[index];
+    if(min > numbers[index])    
+        min = numbers[index];
+    index++;
+}
+Console.WriteLine($"Maximal number is {max} and minimal is {min}.");
 
 
 // Homework. Lesson 1.
@@ -64,15 +64,15 @@
 // Task 4: Напишите программу, которая на вход принимает число (N),
 //  а на выходе показывает все чётные числа от 1 до N.
 
-Console.WriteLine("Input the number.");
-int num = Convert.ToInt32(Console.ReadLine());
-if(num>1)
-{
-    for(int i = 2; i < num; i++)
-    {
-        if(i % 2 == 0)
-        Console.WriteLine(i);
-    }
-}
+// Console.WriteLine("Input the number.");
+// int num = Convert.ToInt32(Console.ReadLine());
+// if(num>1)
+// {
+//     for(int i = 2; i < num; i++)
+//     {
+//         if(i % 2 == 0)
+//         Console.WriteLine(i);
+//     }
+// }
 
 
