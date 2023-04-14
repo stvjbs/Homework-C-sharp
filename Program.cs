@@ -1,54 +1,58 @@
-﻿// Task 1 Напишите программу, которая принимает
-// на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+﻿// Homework lesson 3
 
-// int FunctUnit(int num)
+// Task 1 Напишите программу, которая принимает на
+// вход ?пятизначное? число и проверяет, является ли оно палиндромом.
+
+// bool Pal(int num)
 // {
-//     int first = num / 10;
-//     int second = first % 10;
-//     return second;
-// }
-// Console.WriteLine("Input трезначное число");
-// int num = Convert.ToInt32(Console.ReadLine());
-// int result = FunctUnit(num);
-// Console.WriteLine($"Вторая цифра вашего числа - {result}");
-
-// Task 2 Напишите программу, которая выводит третью цифру заданного числа
-// или сообщает, что третьей цифры нет.
-
-// int FunctThird(int num)
-// {
-//     if(num>99)
-//     {
-//         while(num > 1000)
-//         {
-//             num = num / 10;
-//         }
-//         int num1 = num % 10;
-//         return num1;
-//     }
-//     else 
-//         return(-1);
+//  int current = num;
+//  string num2 = "";
+//  while(current>=1)
+//  {
+//     num2 = num2 + (current % 10);
+//     current = current / 10;
+//  }   
+//  int numcheck = Convert.ToInt32(num2);
+//  if(num == numcheck) return true;
+//  else return false;
 // }
 // Console.WriteLine("Input number");
-// int result = FunctThird(Convert.ToInt32(Console.ReadLine()));
-// if(result == -1) 
-//     Console.WriteLine("третьей цифры нет");
-// else 
-//     Console.WriteLine($"The third unit of yout number is - {result}");
+// int num1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine(Pal(num1) ? "Yes" : "No");
 
-// Task 3 
+// Task 2 Напишите программу, которая принимает на вход координаты двух точек
+// и находит расстояние между ними в 3D пространстве.
 
-// bool Weekend(int num)
+// double Length3D(double x1, double y1,double z1,double x2,double y2,double z2)
 // {
-//     if (num == 6 || num == 7)
-//         return true;
-//     else
-//         return false;    
+//     double length = Math.Round(Math.Sqrt(Math.Pow((x2-x1),2)+Math.Pow((y2-y1),2)+Math.Pow((z2-z1),2)),2);
+//     return length;
 // }
-// Console.WriteLine("Введите день недели от 1-7");
-// int dayOfWeek = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine( Weekend (dayOfWeek) ? "Выбранный день - выходной" : "Выбранный день - рабочий");
+// Console.WriteLine("Input coordinate X of the first point");
+// double x1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input coordinate Y of the first point");
+// double y1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input coordinate Z of the first point");
+// double z1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input coordinate X of the second point");
+// double x2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input coordinate Y of the second point");
+// double y2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input coordinate Z of the second point");
+// double z2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine($"Length between two drops is {Length3D(x1,y1,z1,x2,y2,z2)}");
 
+// Task 3 Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 
-
-
+// void TableCubes(int n)
+// {
+// int current = 1; 
+//     while(current <= n)
+//     {
+//         Console.WriteLine(current + "-" + (Math.Pow(current,3)));
+//         current++;
+//     }
+// }
+// Console.WriteLine("Input number");
+// int n = Convert.ToInt32(Console.ReadLine());
+// TableCubes(n);
