@@ -1,38 +1,18 @@
-﻿// Homework lesson 4
+﻿// Homework lesson 5
 
-// Task 1 Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
-// int NumAB(int a, int b)
+// Task 1 Задайте массив заполненный случайными положительными трёхзначными числами.
+// Напишите программу, которая покажет количество чётных чисел в массиве.
+
+// int[] CreateRandomArray(int size) 
 // {
-//     int result = 1;
-//     for (int c = 1; c <= b; c++)
-//     {
-//         result = result * a;
-//     }
-//     return result;
+//     int[] array = new int[size];
+
+//     for(int i = 0; i < size; i++)
+//         array[i] = new Random().Next(100, 1000);
+
+//     return array;
 // }
-// Console.WriteLine("Input number A");
-// int a = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Input number B");
-// int b = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Your result is - " + NumAB(a,b));
 
-// Task 2 Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе..
-
-// int SumOfNums(int num)
-// {
-//     int sum = 0;
-//     while(num >= 1)
-//     {
-//         sum = sum + (num % 10);
-//         num = num / 10;
-//     }
-//     return sum;
-// }
-// Console.WriteLine("Input number ");
-// int b = Convert.ToInt32(Console.ReadLine());
-// Console.WriteLine("Your result is - " + SumOfNums(b));
-
-// Task 3 Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 // void ShowArray(int[] array)
 // {
 //     for(int i = 0; i < array.Length; i++)
@@ -41,10 +21,100 @@
 //     Console.WriteLine();
 // }
 
-// int[] myArray = new int[8];
-// for(int i = 0; i < 8; i++)
+// int CountNumbers(int[] array)
 // {
-//     Console.WriteLine("Input element");
-//     myArray[i] = Convert.ToInt32(Console.ReadLine());
+//     int count = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if(array[i] % 2 == 0)
+//         count = count + 1;
+//     }
+//     return count;
 // }
+
+// Console.WriteLine("Inpt a quanity of elements: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// int[] myArray = CreateRandomArray(size);
 // ShowArray(myArray);
+// Console.WriteLine("Quanity of even numbers is - " + CountNumbers(myArray));
+
+// Task 2 Задайте одномерный массив, заполненный случайными числами.
+// Найдите сумму элементов, стоящих на нечётных позициях.
+
+// int[] CreateRandomArray(int size, int minValue, int maxValue) 
+// {
+//     int[] array = new int[size];
+
+//     for(int i = 0; i < size; i++)
+//         array[i] = new Random().Next(minValue, maxValue + 1);
+
+//     return array;
+// }
+
+// void ShowArray(int[] array)
+// {
+//     for(int i = 0; i < array.Length; i++)
+//         Console.Write(array[i] + " ");
+
+//     Console.WriteLine();
+// }
+
+// int SumElems(int[] array)
+// {
+//     int sum = 0;
+//     for (int i = 1; i < array.Length; i = i+2)
+//     {
+//         sum += array[i];
+//     }
+//     return sum;
+// }
+// Console.WriteLine("Inpt a quanity of elements: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input a min possible value: ");
+// int min = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Input a max possible value: ");
+// int max = Convert.ToInt32(Console.ReadLine());
+// int[] myArray = CreateRandomArray(size,min,max);
+// ShowArray(myArray);
+
+// Console.WriteLine("Sum = " + SumElems(myArray) );
+
+// Task 3 Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+
+// double[] CreateArray(int size) 
+// {
+//     double[] array = new double[size];
+
+//     for(int i = 0; i < size; i++)
+//     {
+//         Console.WriteLine("Input element");
+//         array[i] = Convert.ToDouble (Console.ReadLine());
+//     }
+//     return array;
+// }
+
+// void ShowArray(double[] array)
+// {
+//     for(int i = 0; i < array.Length; i++)
+//         Console.Write(array[i] + " ");
+
+//     Console.WriteLine();
+// }
+
+// double CheckMaxAndMin(double[] array)
+// {
+//     double max = array[0];
+//     double min = array[0];
+//     for (int i = 1; i < array.Length; i++)
+//     {
+//         if(array[i] < min) min = array [i];
+//         if(array[i] > max) max = array [i];
+//     }
+//     double result = max - min;
+//     return result;
+// }
+// Console.WriteLine("Inpt a quanity of elements: ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// double[] myArray = CreateArray(size);
+// ShowArray(myArray);
+// Console.WriteLine("Difference of max and min numbers is - " + CheckMaxAndMin(myArray)); 
