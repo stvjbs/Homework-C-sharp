@@ -16,7 +16,7 @@
 // int b = Convert.ToInt32(Console.ReadLine());
 // Console.WriteLine("Your result is - " + NumAB(a,b));
 
-// Task 2 Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+// Task 2 Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе..
 
 // int SumOfNums(int num)
 // {
